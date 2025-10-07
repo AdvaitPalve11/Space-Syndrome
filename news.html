@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space News - Cosmic Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Cosmic Explorer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apod.html">NASA APOD</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="facts.html">Fun Facts</a></li>
+                <li><a href="news.html" class="active">Space News</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Latest Space News</h1>
+            <p>Stay updated with the newest discoveries and missions in space exploration</p>
+        </section>
+
+        <section class="news-section">
+            <div class="news-container">
+                <div class="news-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="missions">Missions</button>
+                    <button class="filter-btn" data-category="discoveries">Discoveries</button>
+                    <button class="filter-btn" data-category="technology">Technology</button>
+                </div>
+
+                <div id="loading-news" class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading latest news...</p>
+                </div>
+
+                <div class="news-grid" id="news-grid">
+                    <!-- News articles will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cosmic Explorer</h3>
+                <p>Exploring the universe, one star at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apod.html">NASA APOD</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="facts.html">Fun Facts</a></li>
+                    <li><a href="news.html">Space News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cosmic Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>
