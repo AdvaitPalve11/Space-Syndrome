@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD - Cosmic Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Cosmic Explorer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apod.html" class="active">NASA APOD</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="facts.html">Fun Facts</a></li>
+                <li><a href="news.html">Space News</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>NASA Astronomy Picture of the Day</h1>
+            <p>Discover the cosmos with NASA's daily featured image</p>
+        </section>
+
+        <section class="apod-section">
+            <div class="apod-container">
+                <div class="date-selector">
+                    <label for="apod-date">Select Date:</label>
+                    <input type="date" id="apod-date" max="">
+                    <button id="load-apod" class="btn btn-primary">Load Image</button>
+                </div>
+
+                <div id="loading" class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading...</p>
+                </div>
+
+                <div id="apod-content" class="apod-content">
+                    <div class="apod-media">
+                        <img id="apod-image" src="" alt="APOD">
+                        <iframe id="apod-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="apod-info">
+                        <h2 id="apod-title"></h2>
+                        <p class="apod-date" id="apod-display-date"></p>
+                        <p class="apod-copyright" id="apod-copyright"></p>
+                        <p id="apod-explanation"></p>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Failed to load the image. Please try again or select a different date.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cosmic Explorer</h3>
+                <p>Exploring the universe, one star at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apod.html">NASA APOD</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="facts.html">Fun Facts</a></li>
+                    <li><a href="news.html">Space News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cosmic Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/apod.js"></script>
+</body>
+</html>

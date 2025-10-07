@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets - Cosmic Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Cosmic Explorer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apod.html">NASA APOD</a></li>
+                <li><a href="planets.html" class="active">Planets</a></li>
+                <li><a href="facts.html">Fun Facts</a></li>
+                <li><a href="news.html">Space News</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Explore the Planets</h1>
+            <p>Discover fascinating information about the planets in our solar system</p>
+        </section>
+
+        <section class="planets-section">
+            <div class="planets-grid">
+                <div class="planet-card" data-planet="mercury">
+                    <div class="planet-visual mercury-visual"></div>
+                    <h3>Mercury</h3>
+                    <p class="planet-subtitle">The Closest Planet to the Sun</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="mercury">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="venus">
+                    <div class="planet-visual venus-visual"></div>
+                    <h3>Venus</h3>
+                    <p class="planet-subtitle">The Hottest Planet</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="venus">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="earth">
+                    <div class="planet-visual earth-visual"></div>
+                    <h3>Earth</h3>
+                    <p class="planet-subtitle">Our Home Planet</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="earth">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="mars">
+                    <div class="planet-visual mars-visual"></div>
+                    <h3>Mars</h3>
+                    <p class="planet-subtitle">The Red Planet</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="mars">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="jupiter">
+                    <div class="planet-visual jupiter-visual"></div>
+                    <h3>Jupiter</h3>
+                    <p class="planet-subtitle">The Gas Giant</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="jupiter">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="saturn">
+                    <div class="planet-visual saturn-visual"></div>
+                    <h3>Saturn</h3>
+                    <p class="planet-subtitle">The Ringed Planet</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="saturn">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="uranus">
+                    <div class="planet-visual uranus-visual"></div>
+                    <h3>Uranus</h3>
+                    <p class="planet-subtitle">The Ice Giant</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="uranus">Learn More</button>
+                </div>
+
+                <div class="planet-card" data-planet="neptune">
+                    <div class="planet-visual neptune-visual"></div>
+                    <h3>Neptune</h3>
+                    <p class="planet-subtitle">The Windy Planet</p>
+                    <button class="btn btn-secondary planet-info-btn" data-planet="neptune">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="planet-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-visual">
+                        <div id="modal-planet-visual"></div>
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modal-planet-name"></h2>
+                        <p id="modal-planet-description"></p>
+                        <div class="planet-stats">
+                            <div class="stat">
+                                <h4>Diameter</h4>
+                                <p id="planet-diameter"></p>
+                            </div>
+                            <div class="stat">
+                                <h4>Distance from Sun</h4>
+                                <p id="planet-distance"></p>
+                            </div>
+                            <div class="stat">
+                                <h4>Orbital Period</h4>
+                                <p id="planet-orbit"></p>
+                            </div>
+                            <div class="stat">
+                                <h4>Day Length</h4>
+                                <p id="planet-day"></p>
+                            </div>
+                            <div class="stat">
+                                <h4>Moons</h4>
+                                <p id="planet-moons"></p>
+                            </div>
+                            <div class="stat">
+                                <h4>Temperature</h4>
+                                <p id="planet-temp"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cosmic Explorer</h3>
+                <p>Exploring the universe, one star at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apod.html">NASA APOD</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="facts.html">Fun Facts</a></li>
+                    <li><a href="news.html">Space News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cosmic Explorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/planets.js"></script>
+</body>
+</html>
